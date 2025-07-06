@@ -1,16 +1,17 @@
 # CodeAlpha-Task-2
-Name: Priyanshi Bansal
+**Name: Priyanshi Bansal**
 Company:CodeAlpha 
 Student ID: CA/JU1/14308 
 Duration: 10 June 2025 to 10 July 2025
 Domain : Python Programmig 
 Overview of the project
-Project:Stock Portfolio Tracker
+**Project:Stock Portfolio Tracker**
+![image alt](https://github.com/Priyanshi19-ba/CodeAlpha-Task-2/blob/bbf98be2e6d9f05c121f6017af6812f4bb8b585f/Screenshot%202025-07-06%20182027.png)
 
-Objective:
+**Objective:**
 The objective of this project is to create a simple stock portfolio tracker where the user can input stock names and quantities they own. The program uses a predefined dictionary of stock prices to calculate and display the user’s total investment value. Optionally, the result can be saved to a text or CSV file. This project helps in practicing key programming concepts such as dictionaries, user input/output, basic arithmetic operations, and file handling.
 
-Key Activities:
+**Key Activities:**
 1.Defining Stock Prices
 A hardcoded dictionary (stock_prices) is used to store stock symbols and their respective prices.
 2.Initializing Variables
@@ -38,7 +39,7 @@ After the user is done entering stocks, the program prints a summary showing eac
 The program asks the user if they want to save the results.
 If yes, it prompts for a filename and writes the investment details and total value to the specified file (either .txt or .csv).
 
-Technologies Used:
+**Technologies Used:**
 1.Python Programming Language:
 The entire application is written in Python, which is widely used for scripting and financial calculations.
 2.Python Standard Library:
@@ -50,7 +51,7 @@ Variables and Lists: To keep track of total investment and details of each stock
 Loops and Conditionals: while loops and if-else statements manage user interaction and program flow.
 Error Handling: try-except blocks ensure robust handling of invalid user input.
 
-Key Insights:
+**Key Insights:**
 1.Manual Portfolio Tracking:
 The project demonstrates how users can manually track their investments by entering stock symbols and quantities, reflecting a hands-on approach to portfolio management.
 2.Use of Hardcoded Prices:
