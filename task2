@@ -1,0 +1,46 @@
+stock_prices = {
+    "AAPL": 180,
+    "TSLA": 250,
+    "GOOGL": 2800,
+    "MSFT": 320,
+    "AMZN": 135
+}
+
+total_investment = 0
+investment_details = []
+
+print("Available stocks:", ', '.join(stock_prices.keys()))
+print("Enter 'done' when you're finished.\n")
+
+while True:
+    stock = input("Enter stock symbol (e.g., AAPL): ").upper()
+    if stock == 'DONE':
+        break
+    if stock not in stock_prices:
+        print("Stock not found. Try again.\n")
+        continue
+
+    try:
+        quantity = int(input(f"Enter quantity of {stock}: "))
+        value = stock_prices[stock] * quantity
+        total_investment += value
+        investment_details.append((stock, quantity, stock_prices[stock], value))
+    except ValueError:
+        print("Please enter a valid number.\n")
+print("\nInvestment Summary:")
+for stock, qty, price, value in investment_details:
+    print(f"{stock} - Quantity: {qty}, Price: ${price}, Value: ${value}")
+
+print(f"\nTotal Investment Value: ${total_investment}")
+
+save = input("\nWould you like to save the result to a file? (yes/no): ").lower()
+if save == 'yes':
+    filename = input("Enter file name (e.g., investment.txt or investment.csv): ")
+
+    with open(filename, 'w') as file:
+        file.write("Stock,Quantity,Price,Value\n")
+        for stock, qty, price, value in investment_details:
+            file.write(f"{stock},{qty},{price},{value}\n")
+        file.write(f"\nTotal Investment Value: ${total_investment}")
+    
+    print(f"Investment details saved to {filename}")
